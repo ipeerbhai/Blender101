@@ -90,6 +90,7 @@ class OpenSCADFunctions:
         bpy.ops.object.modifier_add(type='BOOLEAN')
         bpy.context.object.modifiers["Boolean"].operation = 'DIFFERENCE'
         bpy.context.object.modifiers["Boolean"].object = modifier_object
+        bpy.context.object.modifiers["Boolean"].solver = 'CARVE'
         bpy.ops.object.modifier_apply(apply_as='DATA', modifier="Boolean")
         
         ## delete the other object.
